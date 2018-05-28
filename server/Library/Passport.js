@@ -1,6 +1,6 @@
 import passport from 'passport';
 
-const Op = require('sequelize').Op
+const Op = require('sequelize').Op;
 const User = require('../models/User').User;
 
 const LocalStrategy = require('passport-local').Strategy;
@@ -8,7 +8,7 @@ const FacebookStrategy = require('passport-facebook').Strategy;
 const TwitterStrategy = require('passport-twitter').Strategy;
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
-const config = require('../config')
+const config = require('../config');
 
 passport.serializeUser((user, done) => {
     done(null, user.id);
@@ -28,7 +28,7 @@ passport.use(new LocalStrategy({usernameField: 'username'}, (username, password,
     User.findOne(criteria)
         .then(user => {
             if (!user) {
-                return done(null, false, {msg: `Bilgiler geçersiz :(`});
+                return done(null, false, {msg: 'Bilgiler geçersiz :('});
             }
             user.comparePassword(password, (err, isMatch) => {
                 if (err) {

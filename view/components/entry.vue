@@ -8,8 +8,6 @@
 <template>
     <div class="entry" data-eid="1">
         <div class="entry-item">
-
-
             <div class="entry-text">
                 <p>annemin takıp çıkarmalı silikonlu memeleri var. çok garip. kullanıldığında biçimli dursalar da
                     dokunulduğunda sanki yoğun kıvamda

@@ -1,8 +1,7 @@
-import passport from 'passport'
-import User from '../models/user'
+import passport from 'passport';
+import User from '../models/user';
 
-const controller = {};
-controller.register =(req, res, next) => {
+export const register = (req, res, next) => {
     req.assert('username', 'Geçersiz kullanıcı adı!').len(3);
     req.assert('email', 'Geçersiz bir email adresi').isEmail();
     req.assert('password', 'Şifreniz en az 4 karakter uzunluğunda olmalı. ').len(4);
@@ -39,7 +38,7 @@ controller.register =(req, res, next) => {
     });
 };
 
-controller.login = (req, res, next) => {
+export const login = (req, res, next) => {
     req.assert('username', 'Kullanıcı adı veya Email adresi geçersiz').notEmpty();
     req.assert('password', 'Şifre boş bırakılamaz').notEmpty();
 
@@ -64,13 +63,12 @@ controller.login = (req, res, next) => {
     })(req, res, next);
 };
 
-controller.logout = (req, res) => {
+export const logout = (req, res, next) => {
     req.logout();
     req.session.destroy(function (err) {
         if (err) {
             return next(err);
         }
-
         // destroy session data
         req.session = null;
 
@@ -79,4 +77,3 @@ controller.logout = (req, res) => {
     });
 };
 
-export default controller;

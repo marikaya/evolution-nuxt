@@ -1,6 +1,6 @@
-const Express = require('../Express')
-const errorHandler = require('errorhandler')
+const Express = require('../Express');
+const errorHandler = require('errorhandler');
 
 module.exports = () => {
-    Express.core.use(errorHandler())
-}
+    Express.core.use(errorHandler());
+};

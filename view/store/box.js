@@ -7,7 +7,7 @@ export const mutations = {
         if(state.boxState === boxState){
             state.boxState = false;
         }else {
-            state.boxState = boxState
+            state.boxState = boxState;
         }
     }
 };

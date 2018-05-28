@@ -1,4 +1,4 @@
 module.exports = {
     api : require('./ApiRoutes'),
-   // bot : require('./BotRoutes')
-}
+    // bot : require('./BotRoutes')
+};

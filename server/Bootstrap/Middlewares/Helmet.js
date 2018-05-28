@@ -1,6 +1,6 @@
-const Express = require('../Express')
-const helmet = require('helmet')
+const Express = require('../Express');
+const helmet = require('helmet');
 
 module.exports = () => {
-    Express.core.use(helmet())
-}
+    Express.core.use(helmet());
+};

@@ -7,4 +7,4 @@ module.exports = {
     middlewares : [
         'Logger', 'BodyParser', 'Cors', 'Helmet', 'Session', 'Passport', 'Validator', 'ErrorHandler'
     ]
-}
+};

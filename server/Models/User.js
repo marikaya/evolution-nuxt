@@ -1,5 +1,4 @@
-
-module.exports = function(sequelize, DataTypes) {
+export default (sequelize, DataTypes) => {
     const User = sequelize.define('User', {
         id: {
             type: DataTypes.INTEGER,
@@ -39,16 +38,17 @@ module.exports = function(sequelize, DataTypes) {
         coverImage: DataTypes.JSON
     });
 
-    User.associate = function(models) {
+    User.associate = (models) => {
         User.belongsToMany(models.Role, {as: 'Roles', through: 'UserRoles', foreignKey: 'userId'});
     };
 
-    User.prototype.comparePassword = function comparePassword(candidatePassword, cb) {
-       /* bcrypt.compare(candidatePassword, this.password, (err, isMatch) => {
+    User.prototype.comparePassword = (candidatePassword, cb) => {
+        /* bcrypt.compare(candidatePassword, this.password, (err, isMatch) => {
             cb(err, isMatch);
         });*/
     };
-    User.prototype.getFullname = function() {
+
+    User.prototype.getFullname = () => {
         return [this.givenName, this.familyName].join(' ');
     };
 
@@ -69,7 +69,7 @@ module.exports = function(sequelize, DataTypes) {
                     resolve()
                 });
             });*/
-        })
+        });
     });
 
     return User;

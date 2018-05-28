@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+export default (sequelize, DataTypes) => {
     const Role = sequelize.define('Role', {
         id: {
             type: DataTypes.INTEGER,
@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
         description: DataTypes.TEXT,
     });
 
-    Role.associate = function(models) {
+    Role.associate = (models) => {
         Role.belongsToMany(models.User, { as: 'Users', through: 'UserRoles', foreignKey: 'roleId' });
     };
 

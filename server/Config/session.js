@@ -5,7 +5,6 @@ module.exports = {
      *            "memcached", "redis", "array"
      */
     store: 'file',
-
     session: {
         /*
          * forces a session that is "uninitialized" to be saved to the store.
@@ -46,4 +45,4 @@ module.exports = {
             secure: false
         }
     }
-}
+};

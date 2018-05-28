@@ -1,17 +1,20 @@
 const path = require('path');
 module.exports = {
     head: {
-        title: 'AnizmTV DEV',
+        title: 'Avare Sozluk',
         meta: [
             {charset: 'utf-8'},
             {name: 'viewport', content: 'width=device-width, initial-scale=1'},
             {hid: 'description', name: 'description', content: 'Nuxt.js project'},
             {name: 'theme-color', content: '#191919'}
         ],
-        link: [],
+        link: [
+            {rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css'}
+        ],
         script: [
             {src: 'https://use.fontawesome.com/1a9887d093.js'}
         ]
+
     },
     srcDir: __dirname,
     buildDir: '.nuxt',

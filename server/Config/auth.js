@@ -1,12 +1,5 @@
 module.exports = {
-    /*
-     * Username field for signing in.
-     */
     usernameField: ['username', 'email'],
-
-    /*
-     * Social Login key settings.
-     */
     socialLogin: {
         facebook : {
             facebook_key: '754220301289665',
@@ -21,4 +14,4 @@ module.exports = {
             google_secret: 'JdZsIaWhUFIchmC1a_IZzOHb',
         }
     }
-}
+};
