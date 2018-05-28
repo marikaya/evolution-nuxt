@@ -1,6 +1,6 @@
-# Anizm-SSR
+# Evolution-SSR
 
-Server Side Rendering destekli Single Page Application Anizm kaynak kodları.
+Server Side Rendering destekli Single Page Application kaynak kodları.
 View tarafında Vue kullanmaktadır.
 
 localhost çalıştırma
